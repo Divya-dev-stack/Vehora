@@ -1,0 +1,21 @@
+{
+  "dataset_size": 291,
+  "classes": [
+    "battery",
+    "brakes",
+    "clutch_gearbox",
+    "electrical",
+    "engine",
+    "oil_service",
+    "other",
+    "overheating",
+    "starting",
+    "suspension",
+    "tyres"
+  ],
+  "holdout_accuracy": 0.797,
+  "holdout_macro_f1": 0.795,
+  "cv_accuracy": 0.832,
+  "cv_macro_f1": 0.832,
+  "note": "Small self-created dataset. Scores are likely optimistic on real user text."
+}

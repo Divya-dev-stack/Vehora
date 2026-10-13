@@ -1,0 +1,104 @@
+﻿.auth {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--vh-space-5);
+  background: var(--vh-bg);
+}
+
+.auth__card {
+  width: 100%;
+  max-width: 440px;
+  box-shadow: var(--vh-shadow-md);
+}
+
+.auth__brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: var(--vh-space-5);
+  text-align: center;
+}
+
+.auth__logo {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  margin-bottom: var(--vh-space-3);
+  box-shadow: var(--vh-shadow-gold);
+}
+
+.auth__title {
+  font-size: var(--vh-fs-xl);
+  margin-bottom: var(--vh-space-1);
+}
+
+.auth__subtitle {
+  font-size: var(--vh-fs-sm);
+  margin: 0;
+}
+
+.auth__roles {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--vh-space-2);
+  margin-bottom: var(--vh-space-4);
+}
+
+.auth__role {
+  height: var(--vh-btn-height-md);
+  background: var(--vh-surface);
+  color: var(--vh-muted);
+  border: 1px solid var(--vh-border);
+  border-radius: var(--vh-radius-md);
+  font-family: inherit;
+  font-size: var(--vh-fs-sm);
+  font-weight: var(--vh-fw-semibold);
+  cursor: pointer;
+  transition: border-color var(--vh-dur-fast) var(--vh-ease), color var(--vh-dur-fast) var(--vh-ease);
+}
+
+.auth__role--active {
+  color: var(--vh-gold);
+  border-color: var(--vh-gold);
+}
+
+.auth__pw {
+  position: relative;
+  display: flex;
+}
+
+.auth__pw .vh-input {
+  width: 100%;
+  padding-right: 48px;
+}
+
+.auth__pw-toggle {
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  background: transparent;
+  border: 0;
+  color: var(--vh-muted);
+  cursor: pointer;
+}
+
+.auth__alert {
+  padding: var(--vh-space-3) var(--vh-space-4);
+  margin-bottom: var(--vh-space-4);
+  border: 1px solid var(--vh-danger);
+  border-radius: var(--vh-radius-md);
+  color: var(--vh-danger);
+  font-size: var(--vh-fs-sm);
+}
+
+.auth__footer {
+  margin: var(--vh-space-5) 0 0;
+  text-align: center;
+  font-size: var(--vh-fs-sm);
+}

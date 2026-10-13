@@ -1,0 +1,119 @@
+﻿
+> frontend@0.0.0 lint
+> eslint .
+
+
+C:\vehora\frontend\src\components\HealthCard.jsx
+  18:7  error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  16 |   useEffect(() => {
+  17 |     if (!vehicleId) {
+> 18 |       setData(null);
+     |       ^^^^^^^ Avoid calling setState() directly within an effect
+  19 |       return undefined;
+  20 |     }
+  21 |     let active = true;  react-hooks/set-state-in-effect
+  40:6  warning  React Hook useEffect has a missing dependency: 'vehicleId'. Either include it or remove the dependency array                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              react-hooks/exhaustive-deps
+
+C:\vehora\frontend\src\components\MechanicWork.jsx
+  42:5  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  40 |     if (!hasProfile) return undefined;
+  41 |     let active = true;
+> 42 |     load().catch((err) => {
+     |     ^^^^ Avoid calling setState() directly within an effect
+  43 |       if (active) setError(friendlyError(err));
+  44 |     });
+  45 |     const timer = setInterval(() => {  react-hooks/set-state-in-effect
+
+C:\vehora\frontend\src\context\AuthProvider.jsx
+  10:9  error  The value assigned to 'token' is not used in subsequent statements                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    no-useless-assignment
+  17:7  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  15 |     }
+  16 |     if (!token) {
+> 17 |       setLoading(false);
+     |       ^^^^^^^^^^ Avoid calling setState() directly within an effect
+  18 |       return;
+  19 |     }
+  20 |     api  react-hooks/set-state-in-effect
+
+C:\vehora\frontend\src\pages\AdminDashboard.jsx
+  118:5  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  116 |   useEffect(() => {
+  117 |     let active = true;
+> 118 |     setLoading(true);
+      |     ^^^^^^^^^^ Avoid calling setState() directly within an effect
+  119 |     
+  120 |     LOADERS[tab]()
+  121 |       .then((res) => {  react-hooks/set-state-in-effect
+
+C:\vehora\frontend\src\pages\Dashboard.jsx
+  135:53  error  Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+  133 |               <div className="veh-selected">
+  134 |                 <div className="veh-card__head">
+> 135 |                   <span className="veh-card__icon"><SelectedIcon size={26} /></span>
+      |                                                     ^^^^^^^^^^^^ This component is created during render
+  136 |                   <div>
+  137 |                     <h3 className="veh-card__title">{selected.make} {selected.model}</h3>
+  138 |                     <p className="veh-card__sub">
+
+  63 |     ? vehicles.find((v) => v.id === selectedId) || vehicles[0]
+  64 |     : null;
+> 65 |   const SelectedIcon = selected ? getVehicleIcon(selected.vehicle_type) : Car;
+     |                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ The component is created during render here
+  66 |
+  67 |   return (
+  68 |     <main className="dash">  react-hooks/static-components
+
+C:\vehora\frontend\src\pages\FindMechanic.jsx
+  45:5  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  43 |     if (!pos) return undefined;
+  44 |     let active = true;
+> 45 |     setSearching(true);
+     |     ^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  46 |     setError('');
+  47 |     const params = { lat: pos.lat, lng: pos.lng, radius_km: Number(radius) };
+  48 |     if (service) params.service = service;  react-hooks/set-state-in-effect
+
+C:\vehora\frontend\src\pages\MechanicDashboard.jsx
+  2:34  error  'ClipboardList' is defined but never used  no-unused-vars
+  2:49  error  'Inbox' is defined but never used          no-unused-vars
+
+Γ£û 10 problems (9 errors, 1 warning)
+

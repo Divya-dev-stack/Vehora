@@ -1,0 +1,7 @@
+﻿.asst-examples { display: flex; flex-wrap: wrap; gap: var(--vh-space-2); margin: var(--vh-space-3) 0 var(--vh-space-4); }
+.asst-text { min-height: 110px; resize: vertical; width: 100%; }
+.asst-result { margin-top: var(--vh-space-4); }
+.asst-bar { height: 8px; background: var(--vh-border); border-radius: 999px; overflow: hidden; margin: var(--vh-space-2) 0 var(--vh-space-4); }
+.asst-bar__fill { height: 100%; background: var(--vh-gold); }
+.asst-alt { display: flex; justify-content: space-between; color: var(--vh-muted); font-size: var(--vh-fs-sm); padding: 4px 0; }
+.asst-advice { color: var(--vh-text); margin: 0 0 var(--vh-space-4); }

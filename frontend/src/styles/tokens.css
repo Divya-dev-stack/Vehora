@@ -1,0 +1,56 @@
+
+:root {
+  --vh-bg: #101010;
+  --vh-gold: #E0B86A;
+  --vh-gold-highlight: #F4D58D;
+  --vh-card: #1B1B1B;
+  --vh-surface: #292929;
+  --vh-text: #F4F0E8;
+  --vh-muted: #B6B6B6;
+  --vh-border: #383838;
+  --vh-success: #43B581;
+  --vh-warning: #F0B44D;
+  --vh-danger: #E05252;
+
+  --vh-font: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --vh-fs-xs: 0.75rem;
+  --vh-fs-sm: 0.875rem;
+  --vh-fs-md: 1rem;
+  --vh-fs-lg: 1.25rem;
+  --vh-fs-xl: 1.625rem;
+  --vh-fs-2xl: 2.125rem;
+  --vh-fw-regular: 400;
+  --vh-fw-medium: 500;
+  --vh-fw-semibold: 600;
+  --vh-fw-bold: 700;
+
+  --vh-space-1: 4px;
+  --vh-space-2: 8px;
+  --vh-space-3: 12px;
+  --vh-space-4: 16px;
+  --vh-space-5: 24px;
+  --vh-space-6: 32px;
+  --vh-space-7: 48px;
+
+  --vh-radius-sm: 8px;
+  --vh-radius-md: 14px;
+  --vh-radius-lg: 20px;
+  --vh-radius-xl: 28px;
+  --vh-radius-pill: 999px;
+
+  --vh-shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.35);
+  --vh-shadow-md: 0 8px 24px rgba(0, 0, 0, 0.45);
+  --vh-shadow-gold: 0 0 28px rgba(224, 184, 106, 0.18);
+
+  --vh-btn-height-sm: 36px;
+  --vh-btn-height-md: 48px;
+  --vh-btn-height-lg: 56px;
+  --vh-input-height: 48px;
+
+  --vh-ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --vh-dur-fast: 150ms;
+  --vh-dur-base: 250ms;
+  --vh-dur-slow: 600ms;
+
+  --vh-max-width: 1200px;
+}

@@ -1,0 +1,12 @@
+﻿.env
+**/.env
+node_modules/
+dist/
+__pycache__/
+*.pyc
+.venv/
+venv/
+inspect*.txt
+security_audit.txt
+lint_files.txt
+context.txt

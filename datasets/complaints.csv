@@ -1,0 +1,292 @@
+text,label
+my battery is dead,battery
+battery drained overnight,battery
+battery is not holding charge,battery
+battery terminal is corroded,battery
+battery warning light is on,battery
+need to replace the battery,battery
+battery died while parked,battery
+dashboard shows battery low,battery
+alternator is not charging the battery,battery
+jump start needed because battery is flat,battery
+charging problem in my vehicle,battery
+indicator shows low voltage battery,battery
+battery got discharged after leaving the lights on,battery
+battery clamp loose,battery
+battery smell like rotten egg,battery
+battery volts are very low,battery
+battery health is poor,battery
+battery is swollen,battery
+battery water level is low,battery
+battery is leaking acid,battery
+new battery needed,battery
+battery loses charge in two days,battery
+vehicle battery is weak,battery
+bike will not start,starting
+bike is not starting,starting
+car is not starting,starting
+engine is not starting in the morning,starting
+self start is not working,starting
+kick start does not work,starting
+engine cranks but does not start,starting
+scooter start problem,starting
+starter motor makes clicking sound,starting
+vehicle takes many attempts to start,starting
+cold start problem,starting
+vehicle does not start after rain,starting
+engine fires but stalls immediately,starting
+car cranks slowly but wont start,starting
+ignition problem vehicle wont start,starting
+hard starting issue,starting
+no start condition,starting
+ignition key does nothing when turned,starting
+starter button gives no response,starting
+engine takes too long to start,starting
+bike only starts with a push,starting
+bike does not start when the engine is hot,starting
+engine turns off right after starting,starting
+engine is making a knocking noise,engine
+engine misfiring,engine
+vehicle jerks while accelerating,engine
+engine vibration is too high,engine
+black smoke from exhaust,engine
+white smoke coming from silencer,engine
+engine stalls while driving,engine
+engine oil leak,engine
+engine check light is on,engine
+poor acceleration,engine
+bike loses power on slopes,engine
+engine rough idle,engine
+engine backfire,engine
+fuel consumption has increased a lot,engine
+engine surging at constant speed,engine
+vehicle hesitates when I press the accelerator,engine
+engine ticking sound,engine
+carburetor issue bike runs rough,engine
+engine shaking at signal,engine
+engine performance is poor,engine
+engine has lost power,engine
+mileage has dropped a lot,engine
+engine is very noisy,engine
+bike switches off at idle,engine
+vehicle will not pick up speed,engine
+engine is overheating,overheating
+temperature gauge is in red,overheating
+coolant level is low,overheating
+radiator is leaking,overheating
+steam coming from the bonnet,overheating
+radiator fan is not working,overheating
+temperature warning light came on,overheating
+bike engine very hot after short ride,overheating
+car overheats in traffic,overheating
+coolant reservoir is empty,overheating
+vehicle boils over,overheating
+burning smell and high temperature,overheating
+thermostat stuck engine hot,overheating
+coolant color changed and engine is hot,overheating
+water pump leak and overheating,overheating
+engine temperature rising fast,overheating
+air cooled engine too hot in summer,overheating
+overheating while climbing ghat road,overheating
+engine temperature warning,overheating
+coolant is leaking,overheating
+engine is too hot to touch,overheating
+cooling fan does not work,overheating
+engine got hot and switched off,overheating
+scooter gets hot and loses speed,overheating
+coolant needs a top up,overheating
+brakes are not working properly,brakes
+brake pedal feels soft,brakes
+squeaking sound when I apply brake,brakes
+brake pad worn out,brakes
+vehicle takes long distance to stop,brakes
+brake lever is loose,brakes
+brake fluid is low,brakes
+grinding noise from brakes,brakes
+disc brake vibrates,brakes
+hand brake is not holding,brakes
+brake pedal goes to the floor,brakes
+abs warning light is on,brakes
+front brake weak,brakes
+brake oil leak,brakes
+brake drum issue,brakes
+brake stuck wheel does not rotate freely,brakes
+burning smell from brakes,brakes
+brake lever touches the handle,brakes
+parking brake problem,brakes
+brake pad change needed,brakes
+car pulls to one side while braking,brakes
+rear brake is loose,brakes
+brake shoes need replacing,brakes
+brakes make a noise,brakes
+vibration when I brake,brakes
+bike brake is too tight,brakes
+vehicle does not stop properly when I brake,brakes
+tyre puncture,tyres
+flat tyre,tyres
+front tyre is losing air,tyres
+tyre is worn out,tyres
+tyre burst on the highway,tyres
+tyre pressure is low,tyres
+need to change the tyre,tyres
+tyre bulge visible on the sidewall,tyres
+wheel balancing problem,tyres
+tubeless tyre air leak,tyres
+spare tyre change help,tyres
+uneven tyre wear,tyres
+tyre valve leak,tyres
+tyre blowout,tyres
+wheel alignment is off tyre wearing on one side,tyres
+tyre rubbing against mudguard,tyres
+tyre pressure warning light,tyres
+there is a nail in the tyre,tyres
+rear tyre is flat,tyres
+tube is leaking,tyres
+tyre has a cut,tyres
+need a puncture repair shop,tyres
+back tyre has no air,tyres
+tyre is very thin and needs replacing,tyres
+stuck on the road with a puncture,tyres
+headlight is not working,electrical
+horn is not working,electrical
+indicator lights not blinking,electrical
+tail light is fused,electrical
+wiring short circuit,electrical
+fuse keeps blowing,electrical
+dashboard lights are not working,electrical
+speedometer is not showing,electrical
+fuel gauge shows wrong reading,electrical
+power window is not working,electrical
+central locking issue,electrical
+wiper motor not working,electrical
+ac is not cooling in my car,electrical
+music system not working,electrical
+charging socket is dead,electrical
+brake light is not glowing,electrical
+switch gear is not working,electrical
+battery is fine but lights flicker,electrical
+digital meter display blank,electrical
+relay is faulty,electrical
+electrical problem in the bike,electrical
+hazard lights not working,electrical
+bulb has blown,electrical
+headlight is dim,electrical
+side indicator is not working,electrical
+high beam is not working,electrical
+smell of burning wire,electrical
+lights are not working,electrical
+clutch is slipping,clutch_gearbox
+gear is not shifting,clutch_gearbox
+clutch plate worn out,clutch_gearbox
+clutch pedal is hard,clutch_gearbox
+gear stuck in neutral,clutch_gearbox
+gear box makes noise,clutch_gearbox
+clutch lever is too tight,clutch_gearbox
+difficulty in changing gears,clutch_gearbox
+clutch pedal goes to the floor,clutch_gearbox
+grinding when I shift gears,clutch_gearbox
+gear lever is loose,clutch_gearbox
+clutch burning smell,clutch_gearbox
+gearbox oil leak,clutch_gearbox
+car jumps when I release the clutch,clutch_gearbox
+bike jerks when I shift gears,clutch_gearbox
+reverse gear is not engaging,clutch_gearbox
+gear shift is hard,clutch_gearbox
+rpm increases but vehicle does not speed up,clutch_gearbox
+gear pop out while riding,clutch_gearbox
+clutch judder,clutch_gearbox
+automatic gearbox delay in shifting,clutch_gearbox
+noise when changing gears,clutch_gearbox
+gears are slipping,clutch_gearbox
+clutch free play needs adjusting,clutch_gearbox
+clutch wire has snapped,clutch_gearbox
+clutch plate needs replacing,clutch_gearbox
+first gear does not engage,clutch_gearbox
+clutch is not holding and the vehicle moves,clutch_gearbox
+shock absorber is leaking,suspension
+bike bounces a lot on bumps,suspension
+suspension is too stiff,suspension
+steering is hard to turn,suspension
+steering wheel vibrates,suspension
+handlebar shakes at high speed,suspension
+front fork oil leak,suspension
+clunking noise from the front,suspension
+rear suspension sagging,suspension
+wheel alignment problem steering is off center,suspension
+ball joint noise,suspension
+ride quality is very bumpy,suspension
+suspension spring broken,suspension
+noise from suspension on rough roads,suspension
+steering wheel not returning to center,suspension
+tie rod end worn,suspension
+front fork bent after accident,suspension
+monoshock leak,suspension
+car body roll is high,suspension
+stabilizer link noise,suspension
+power steering is heavy,suspension
+bike wobbles at speed,suspension
+loud noise over speed breakers,suspension
+shock absorbers need replacing,suspension
+steering pulls to one side,suspension
+vehicle leans to one side,suspension
+there is play in the steering,suspension
+handlebar vibrates,suspension
+vehicle keeps bouncing,suspension
+time for oil change,oil_service
+general service due,oil_service
+engine oil is black,oil_service
+oil change is due,oil_service
+periodic service needed,oil_service
+air filter needs cleaning,oil_service
+oil filter replacement,oil_service
+full service for my car,oil_service
+chain lubrication and adjustment,oil_service
+spark plug change and tuning,oil_service
+oil level is low on the dipstick,oil_service
+water wash and general check up,oil_service
+chain sprocket kit change,oil_service
+service reminder light is on,oil_service
+coolant and oil top up,oil_service
+annual maintenance service,oil_service
+first free service due,oil_service
+brake oil and engine oil replace,oil_service
+general checkup before long trip,oil_service
+5000 km completed service needed,oil_service
+service booking needed,oil_service
+air filter oil filter and engine oil change,oil_service
+clutch wire and accelerator wire lubrication,oil_service
+regular maintenance schedule,oil_service
+the service kilometres are over,oil_service
+bike needs a service,oil_service
+vehicle has not been serviced for a long time,oil_service
+engine oil needs changing,oil_service
+tuning needed for my bike,oil_service
+hello,other
+hi there,other
+good morning,other
+good evening,other
+what is your name,other
+tell me a joke,other
+tell me a story,other
+how is the weather today,other
+thank you,other
+who are you,other
+what can you do,other
+I want to book a movie ticket,other
+how to cook biryani,other
+I need a recipe,other
+what is the capital of india,other
+cricket score today,other
+help me with my homework,other
+I am hungry,other
+sing a song for me,other
+how are you,other
+ok bye,other
+I want to buy a mobile phone,other
+what time is it,other
+recharge my phone,other
+how to learn python,other
+latest movie news,other
+I love music,other
+just testing,other
+asdf qwerty,other
