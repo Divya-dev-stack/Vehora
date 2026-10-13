@@ -1,10 +1,15 @@
+```python
 from datetime import datetime, timezone
 
 from fastapi import APIRouter, Depends, HTTPException, status
 from pymongo.errors import DuplicateKeyError, PyMongoError
 
 from app.api.deps import get_current_user
-from app.core.security import create_access_token, hash_password, verify_password
+from app.core.security import (
+    create_access_token,
+    hash_password,
+    verify_password,
+)
 from app.db.mongo import get_db
 from app.schemas.auth import LoginIn, RegisterIn, TokenOut, UserOut
 
@@ -23,46 +28,93 @@ def to_user_out(doc: dict) -> UserOut:
     )
 
 
-@router.post("/register", response_model=UserOut, status_code=status.HTTP_201_CREATED)
+@router.post(
+    "/register",
+    response_model=UserOut,
+    status_code=status.HTTP_201_CREATED,
+)
 def register(data: RegisterIn):
+    # Public registration is allowed only for users and mechanics.
+    # Admin accounts must be created through a secure admin process.
     if data.role not in ("user", "mechanic"):
-        raise HTTPException(status_code=403, detail="This role cannot be registered.")
-    users = get_db().users
-    email = data.email.lower()
-    doc = {
-        "full_name": data.full_name,
-        "email": email,
-        "phone": data.phone,
-        "password_hash": hash_password(data.password),
-        "role": data.role,
-        "is_active": True,
-        "created_at": datetime.now(timezone.utc),
-    }
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="This role cannot be registered.",
+        )
+
     try:
+        users = get_db().users
+        email = data.email.lower()
+
         if users.find_one({"email": email}):
-            raise HTTPException(status_code=409, detail="An account with this email already exists.")
-        users.insert_one(doc)
+            raise HTTPException(
+                status_code=status.HTTP_409_CONFLICT,
+                detail="An account with this email already exists.",
+            )
+
+        doc = {
+            "full_name": data.full_name,
+            "email": email,
+            "phone": data.phone,
+            "password_hash": hash_password(data.password),
+            "role": data.role,
+            "is_active": True,
+            "created_at": datetime.now(timezone.utc),
+        }
+
+        result = users.insert_one(doc)
+        doc["_id"] = result.inserted_id
+
+    except HTTPException:
+        raise
     except DuplicateKeyError:
-        raise HTTPException(status_code=409, detail="An account with this email already exists.")
+        raise HTTPException(
+            status_code=status.HTTP_409_CONFLICT,
+            detail="An account with this email already exists.",
+        )
     except PyMongoError:
-        raise HTTPException(status_code=503, detail=DB_DOWN)
+        raise HTTPException(
+            status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+            detail=DB_DOWN,
+        )
+
     return to_user_out(doc)
 
 
 @router.post("/login", response_model=TokenOut)
 def login(data: LoginIn):
     try:
-        user = get_db().users.find_one({"email": data.email.lower()})
+        user = get_db().users.find_one(
+            {"email": data.email.lower()}
+        )
     except PyMongoError:
-        raise HTTPException(status_code=503, detail=DB_DOWN)
+        raise HTTPException(
+            status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+            detail=DB_DOWN,
+        )
+
     if (
         not user
         or not user.get("is_active", True)
-        or not verify_password(data.password, user["password_hash"])
+        or not verify_password(
+            data.password,
+            user["password_hash"],
+        )
     ):
-        raise HTTPException(status_code=401, detail="Incorrect email or password.")
-    token = create_access_token(str(user["_id"]), user["role"])
-    return TokenOut(access_token=token, user=to_user_out(user))
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Incorrect email or password.",
+        )
+
+    token = create_access_token(
+        str(user["_id"]),
+        user["role"],
+    )
+
+    return TokenOut(
+        access_token=token,
+        user=to_user_out(user),
+    )
 
 
 @router.get("/me", response_model=UserOut)
